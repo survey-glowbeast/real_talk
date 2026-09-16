@@ -3,22 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>glowbeast — real talk</title>
+<title>glowbeast: real talk</title>
 
 <!-- 링크 미리보기 (인스타 DM / 카톡 / 슬랙 등). og:image 는 반드시 절대 URL. -->
-<meta name="description" content="A few quick questions, about two minutes. Be as blunt as you like — the flattering answers are the ones we can't use.">
+<meta name="description" content="A few quick questions, about two minutes. Be as blunt as you like. The flattering answers are the ones we can't use.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="glowbeast">
 <meta property="og:url" content="https://survey-glowbeast.github.io/real_talk/">
 <meta property="og:title" content="glowbeast wants even more of your opinion!!">
-<meta property="og:description" content="Two minutes. Be as blunt as you like — the flattering answers are the ones we can't use.">
+<meta property="og:description" content="Two minutes. Be as blunt as you like. The flattering answers are the ones we can't use.">
 <meta property="og:image" content="https://glowbeast.github.io/tell-us-the-truth/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="TRUTH OR NOTHING">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="glowbeast wants even more of your opinion!!">
-<meta name="twitter:description" content="Two minutes. Be as blunt as you like — the flattering answers are the ones we can't use.">
+<meta name="twitter:description" content="Two minutes. Be as blunt as you like. The flattering answers are the ones we can't use.">
 <meta name="twitter:image" content="https://glowbeast.github.io/tell-us-the-truth/og.png">
 
 <!-- ───────────────────────────────────────────────────────────────
@@ -407,7 +407,7 @@
   <header>
     <div class="eyebrow">glowbeast &times; you</div>
     <h1>Tell us what you <mark>actually</mark> think.</h1>
-    <p class="lede">A few quick questions, about two minutes. Be as blunt as you like &mdash; the flattering answers are the ones we can&rsquo;t use.</p>
+    <p class="lede">A few quick questions, about two minutes. Be as blunt as you like. The flattering answers are the ones we can&rsquo;t use.</p>
   </header>
 
   <div class="board">
@@ -431,7 +431,7 @@
 
         <div class="q">
           <label for="q_sns">Main SNS channel link</label>
-          <div class="hint">Instagram, TikTok, YouTube &mdash; whichever you post on most.</div>
+          <div class="hint">Instagram, TikTok, YouTube, whichever you post on most.</div>
           <input type="text" id="q_sns" data-key="sns_link" placeholder="Paste the link" autocomplete="off" />
         </div>
 
@@ -447,13 +447,13 @@
 
         <div class="q">
           <label for="q5">What do you think we can improve about the spray?</label>
-          <div class="hint">Formula, texture, scent, the nozzle, size, price, how it feels, visible results</div>
+          <div class="hint">Look, scent, feel, irritation, results</div>
           <textarea id="q5" data-key="q5" placeholder="Skip this if you haven&rsquo;t tried it"></textarea>
         </div>
 
         <div class="q">
           <label for="q10">What do you think we can improve about the cleanser?</label>
-          <div class="hint">How it lathers, how it feels after, the scent, the packaging, how it performs, visible results</div>
+          <div class="hint">Look, lather, scent, feel, tightness, results</div>
           <textarea id="q10" data-key="q10" placeholder="Skip this if you haven&rsquo;t tried it"></textarea>
         </div>
 
@@ -470,8 +470,8 @@
 
         <div class="q">
           <label for="q12">Any skin concerns, or a new product you wish we made?</label>
-          <div class="hint">Dryness, breakouts, sensitivity &mdash; or real talk, what do you actually need right now?</div>
-          <textarea id="q12" data-key="q12" placeholder="Anything goes &mdash; just write whatever&rsquo;s on your mind"></textarea>
+          <div class="hint">Dryness, breakouts, sensitivity... what do you actually need right now?</div>
+          <textarea id="q12" data-key="q12" placeholder="Just say what&rsquo;s on your mind!"></textarea>
         </div>
 
         <div class="q">
@@ -492,7 +492,7 @@
       <!-- done -->
       <section class="panel done" id="panel-done" hidden>
         <h2 id="done-title">That&rsquo;s it. Thank you, genuinely.</h2>
-        <p id="done-body">Your answers are in. We read every single one &mdash; the blunt ones twice.</p>
+        <p id="done-body">Your answers are in. We read every single one, the blunt ones twice.</p>
 
         <div id="fallback" hidden>
           <textarea id="summary" readonly aria-label="Your answers, ready to copy"></textarea>
@@ -664,12 +664,12 @@
   function showDone(sent) {
     if (sent) {
       doneTitle.textContent = "That's it. Thank you, genuinely.";
-      doneBody.textContent = "Your answers are in. We read every single one — the blunt ones twice.";
+      doneBody.textContent = "Your answers are in. We read every single one, the blunt ones twice.";
       fallback.hidden = true;
       foot.textContent = "Sent. You can close this tab.";
     } else {
-      doneTitle.textContent = "Almost — one manual step.";
-      doneBody.textContent = "We couldn't reach the server just now. Copy your answers below and paste them straight back into the DM — nothing is lost.";
+      doneTitle.textContent = "Almost, one manual step.";
+      doneBody.textContent = "We couldn't reach the server just now. Copy your answers below and paste them straight back into the DM. Nothing is lost.";
       summary.value = buildSummary();
       fallback.hidden = false;
       foot.textContent = "Your answers stay in this browser until you copy them over.";
@@ -745,7 +745,7 @@
       try { ok = document.execCommand("copy"); } catch (e) {}
       toast.textContent = ok
         ? "Copied. Paste it into the DM and you're done."
-        : "Couldn't copy automatically — the text is selected, hit Cmd/Ctrl+C.";
+        : "Couldn't copy automatically. The text is selected, hit Cmd/Ctrl+C.";
     }
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(summary.value).then(function () {
